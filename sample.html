@@ -13,7 +13,7 @@ function changeSeats(btn){
         for(var i=0;i<7;i++){
             ta.value += "<li>"+lst.splice((Math.random()*lst.length)^0,1)[0]+"</li>";
         }
-        ta.value += "</ul>""\n";
+        ta.value += "</ul>"+"\n";
     }
         btn.disabled = true;
 }
