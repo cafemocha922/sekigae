@@ -8,16 +8,19 @@ var lst = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16
 function changeSeats(btn){
     var ta = document.getElementById("txt_ara");
     ta.value = "";
-    for(var i=0, len=lst.length; i<len; i++){
-        ta.value += lst.splice((Math.random()*lst.length)^0,1)[0]+"\n";
+    for(var l=0;l<6;l++){
+        for(var i=0;i<7;i++){
+            ta.value += lst.splice((Math.random()*lst.length)^0,1)[0]+"";
+        }
+        ta.value += "\n";
     }
-    btn.disabled = true;
+        btn.disabled = true;
 }
 </script>
 </head>
 <body>
 <input type="button" value="席替え" onclick="changeSeats(this)"><br>
 <textarea rows="33" cols="30" id="txt_ara"></textarea>
-
+//replit
 </body>
 </html>
