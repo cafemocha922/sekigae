@@ -9,7 +9,7 @@ function changeSeats(btn){
     var ta = document.getElementById("txt_ara");
     ta.value = "";
     for(var i=0, len=lst.length; i<len; i++){
-        ta.value += lst.splice((Math.random()*lst.length)^0,1)[0];
+        ta.value += lst.splice((Math.random()*lst.length)^0,1)[0];+"\n"
     }
     btn.disabled = true;
 }
