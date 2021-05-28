@@ -16,7 +16,8 @@ function changeSeats(btn){
             ta.value += lst.splice((Math.random()*lst.length)^0,1)[0];
             ta.innerHTML = "</td>";
         }
-        ta.innerHTML = "</tr>"+"\n";
+        ta.innerHTML = "</tr>";
+        ta.value += "\n";
     }
         btn.disabled = true;
     ta.innerHTML="</table>";
