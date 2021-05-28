@@ -9,13 +9,13 @@ function changeSeats(btn){
     var ta = document.getElementById("txt_ara");
     ta.value = "";
     for(var l=0;l<6;l++){
-        ta.innerHTML = "<ul>";
+        ta.innerHTML = "<tr>";
         for(var i=0;i<7;i++){
-            ta.innerHTML = "<li>";
+            ta.innerHTML = "<td>";
             ta.value += lst.splice((Math.random()*lst.length)^0,1)[0];
-            ta.innerHTML = "</li>";
+            ta.innerHTML = "</td>";
         }
-        ta.innerHTML = "</ul>"+"\n";
+        ta.innerHTML = "</tr>"+"\n";
     }
         btn.disabled = true;
 }
@@ -23,7 +23,7 @@ function changeSeats(btn){
 </head>
 <body>
 <input type="button" value="席替え" onclick="changeSeats(this)"><br>
-<textarea rows="33" cols="30" id="txt_ara"></textarea>
+<table border="1" id="txt_ara"></border>
 //replit
 </body>
 </html>
