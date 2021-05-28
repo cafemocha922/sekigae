@@ -10,16 +10,13 @@ function changeSeats(btn){
     ta.value = "";
     for(var i=0, len=lst.length; i<len; i++){
         ta.value += lst.splice((Math.random()*lst.length)^0,1)[0];
-        ta.value += "さん\t" + (i+1) + "番です。\n";
-        
     }
     btn.disabled = true;
 }
 </script>
 </head>
 <body>
-<input type="button" value="席替え" onclick="changeSeats(this)">
-(やり直しは「F5」キーなどでリロード)<br>
+<input type="button" value="席替え" onclick="changeSeats(this)"><br>
 <textarea rows="33" cols="30" id="txt_ara"></textarea>
 
 </body>
